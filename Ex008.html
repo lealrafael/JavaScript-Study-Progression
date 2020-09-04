@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repassando</title>
+    <style>
+        p{
+            font-size: 2.5em;
+        }
+        h1{
+            font:normal 25pt Arial;
+        }
+
+        input{
+            background-color: coral;
+            width: 200px;
+            height: 200px;
+            font: normal 40pt Arial;
+        }
+        div{
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+<p><strong>Fazendo do zero!</strong></p>
+
+<h1>Somando valores novamente...</h1>
+<input type="number" id="nb1">
+<input type="number" id="nb2">
+<input type="button" value="Somar" id="btsum">
+
+<div class="italic" id="res"><strong>Resultado!</strong></div>
+
+    <script>
+        var sum_bt = document.querySelector('input#btsum')
+        sum_bt.addEventListener('click', somar)
+
+        function somar(){
+            var field1 = document.getElementById('nb1')
+            var field2 = document.querySelector('input#nb2')
+
+            var fil1 = Number(field1.value)
+            var fil2 = Number(field2.value)
+
+            var tt_sum = fil1 + fil2
+
+            res.innerHTML = `O resultado da soma do valor de número ${fil1} mais o valor de número ${fil2} é <strong>${tt_sum}</strong> !`
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
